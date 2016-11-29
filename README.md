@@ -18,7 +18,7 @@ This repo has code for question answering... Given a set of phrases, based on th
                5. TestScript.py
 
 # 4th Step -> Make sure all the dependent python libraries and packages are installed
-               1. Keras
+               1. Keras - this link might help http://ankivil.com/installing-keras-theano-and-dependencies-on-windows-10/
                2. Theano
                3. TensorFlow
                4. NLTK
@@ -74,4 +74,31 @@ This repo has code for question answering... Given a set of phrases, based on th
                        After reading data and preprocessed it, now its time to construct the model
                            storymodel.model()
                        This function will construct the model, train it and then evaluate it based on read data.
+                       
+# Results
+1. Who Questions - 25.18% accuracy
+2. Why Questions - 25.44% accuracy
+3. What Questions - 25.88% accuracy
+4. Where Questions - 0% accuracy
+5. Which Questions - - 
+6. When Questions - 53.58% accuracy
+7. How Questions - 19.55% accuracy
+
+Data size for each type of question is 50000. All are open ended. One observation is as size of the data increases, accurarcy also increases.
+
+# Folder and File description
+## data
+This will have data files. When we generate sample files from the visual gnome data set, those files are generated here.
+## results
+This has the log files which will give the accuracy for each epoch. For every type of question, we have corresponding file
+## DataFileInputOutput.py
+This file has classes and functions which will help you to read the data from the data file or from corpora. It will also help you to generate sample files from the corpora.
+## ImageDataStructure.py
+This file has functions and classes which will define our data format. So when we read the data from corpora or dataset will be converting to the format defined in this file.
+## Models.py
+This file has classes and functions which will help you to form the language models. Basically in this file we are constructing our neural networks.
+## preprocessdata.py
+This file has functions and classes which can be used for preprocess the data like converting them into vectors, tokenizing the sentences.
+## TestScript.py
+This file can be used for generating the sample data files and also to run the neural network. Train and evaluate the models.
 
